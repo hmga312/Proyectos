@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import date
+from cloudinary.models import CloudinaryField
       
 class Category(models.Model):
     name = models.CharField(max_length=50, null=False, blank=False)
@@ -21,7 +22,7 @@ class Post(models.Model):
     content = models.TextField(max_length=4000, null=False, blank=False, verbose_name="Contenido")
     date = models.DateField(default=date.today, verbose_name="Fecha de creacion")
     status = models.BooleanField(default=True, verbose_name="Estado")
-    image = models.ImageField(null=False, blank=False, verbose_name="Imagen", upload_to="post/")
+    image = CloudinaryField('Imagen', folder="post", blank=False, null=False )
     slug = models.SlugField(unique=True,)
     
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name="Categoria")
