@@ -51,9 +51,9 @@ INSTALLED_APPS = [
 ]
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': config('CLOUD_NAME'),
-    'API_KEY': config('API_KEY'),
-    'API_SECRET': config('API_SECRET'),
+    'CLOUD_NAME':'dzciqzurd',
+    'API_KEY':'715998643761999',
+    'API_SECRET':'LaAvH3vmbh4b4xN9UHRF7JOH2SA',
 }
 
 MIDDLEWARE = [
