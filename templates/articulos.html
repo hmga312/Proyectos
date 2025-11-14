@@ -47,6 +47,7 @@
         <a href="{% url 'info' articulo.id %}">
             <img class="img_articulo" src="{{ articulo.image.url }}" alt="{{ articulo.title }}">
         </a>
+        <h1>{{ articulo.image.url }}</h1>
         <h1><a href="{% url 'info' articulo.id %}">{{ articulo.title }}</a></h1>
     </div>
     {% endfor %}
