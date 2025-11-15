@@ -50,6 +50,13 @@ INSTALLED_APPS = [
     'cloudinary_storage',
 ]
 
+cloudinary.config( 
+  cloud_name = config('CLOUD_NAME'),
+  api_key = config('CLOUD_API_KEY'), # <-- Necesitas que este valor se cargue
+  api_secret = config('CLOUD_API_SECRET'),
+  secure = True
+)
+
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': config('CLOUD_NAME'),
     'API_KEY': config('CLOUD_API_KEY'),
